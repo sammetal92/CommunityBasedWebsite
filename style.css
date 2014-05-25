@@ -1,0 +1,82 @@
+body
+{
+	font-family: sans-serif;
+	background: black;
+	color: white;
+}
+
+a:link, a:visited
+{
+	color: #337FD6;
+	text-decoration: none;
+}
+
+a:hover, a:active
+{
+	color: #86F7E4;
+	text-decoration: underline;
+}
+
+h2, h1
+{
+	font-variant: small-caps;
+	text-decoration: underline;
+	color:gray;
+}
+
+#main-header
+{
+	background: url('logo.png') no-repeat;
+	width: 40%;
+	height: 20%;
+	font-family: sans-serif;
+}
+
+.navig
+{
+	display: inline;
+	text-align: center;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-variant: small-caps;
+	font-size: 16pt;
+	padding: 10px;
+	width: auto;
+}
+
+ul li a:hover, ul li a:active
+{
+	color: blue;
+	text-decoration: underline;
+}
+
+ul li a:link, ul li a:visited
+{
+	color: blue;
+}
+
+#topnavbar
+{
+	border: solid blue 2px;
+	background: cyan;
+}
+
+tr, td
+{
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+.messageTable
+{
+	border: 1px solid blue;
+	border-collapse: collapse;
+}
+
+hr
+{
+	background-color: cyan;
+	height: 1px;
+}

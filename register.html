@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title>Register - The GameBook</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<script type="text/javascript">
+		function validateForm()
+		{
+			var valid = true;
+			var x=document.forms["reg"]["email"].value;
+			var atpos=x.indexOf("@");
+			var dotpos=x.lastIndexOf(".");
+			
+			if (document.forms["reg"]["name"].value == "" || document.forms["reg"]["email"].value == "" ||
+				document.forms["reg"]["username"].value == "" || document.forms["reg"]["password"].value == "" ||
+				document.forms["reg"]["location"].value == "" || document.forms["reg"]["repass"].value == "" ||
+				document.forms["reg"]["name"].value == null || document.forms["reg"]["email"].value == null || 
+				document.forms["reg"]["username"].value == null || document.forms["reg"]["password"].value == null || 
+				document.forms["reg"]["location"].value == null || document.forms["reg"]["repass"].value == null ||
+				re.test(["reg"]["email"]) == false)
+			{
+				valid = false;
+				alert("All fields must be filled!");
+			}
+
+			else if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+			{
+				valid = false;
+			  	alert("Not a valid e-mail address!");
+			}
+
+			else valid = true;
+
+			return valid;
+		}
+	</script>
+</head>
+<body>
+	<center>
+	<br /><br />
+	<a href="index.php"><div id="main-header"></div></a>
+	<p>
+	<div id="navbar">
+	<ul class="navig" id="topnavbar">
+		<li class="navig"><a href="news.php">News</a></li>
+		<li class="navig"><a href="forums.php">Forums</a></li>
+		<li class="navig"><a href="contests.php">Giveaways And Competitions</a></li>
+		<li class="navig"><a href="login.html">Login</a></li>
+		<li class="navig"><a href="register.html">Register</a></li>
+		<li class="navig"><a href="about.php">About Us</a></li>
+		<li class="navig"><a href="contact.php">Contact</a></li>
+	</ul>
+	</div>
+	</p>
+	</center>
+	<h1>Register</h1>
+	<table width="50%">
+		<form action="reg.php" method="POST" onsubmit="return validateForm()" name="reg">
+			<tr>
+				<td><b>Name: <b></td><td><input type="text" name="name"></td><td><b>Location: </b></td><td><input type="text" name="location"></td>
+			</tr>
+			<tr>
+				<td><b>Email Address: </b></td><td><input type="text" name="email"></td><td><b>UserName: </b></td><td><input type="text" name="username"></td>
+			</tr>
+			<tr>
+				<td><b>Password: </b></td><td><input type="password" name="pass"></td><td><b>Re-enter Password: </b></td><td><input type="password" name="repass"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Register"></td>
+			</tr>
+		</form>
+	</table>
+	<hr>
+	<table width=100%>
+	<tr>
+		<td style="font-size: 9pt;">Made by the YOLO Team</td>
+	</tr>
+	</table>
+</body>
+</html>
